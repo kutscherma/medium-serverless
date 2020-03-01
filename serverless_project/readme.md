@@ -5,7 +5,7 @@ This is the repository for my medium articel ['Deploy AWS Lambda (Node.js) with 
 Based on the Serverless Framework this piece of software creates a REST API on AWS which reads a .csv file from S3, convert it into JSON and sends it back to client. To read more details about the Serveless Framework visit the [documentation for Serverless Framework on aws](https://serverless.com/framework/docs/providers/aws/).
 
 ## Architecture
-![Image of Yaktocat](/architecture.png)
+![Image of Yaktocat](./docu/architecture.png)
 
 ## Prerequisite
 - AWS Account
