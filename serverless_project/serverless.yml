@@ -7,8 +7,7 @@ provider:
   stage: dev
   region: eu-west-1
   stackName: my-lambda-${self:provider.stage}
-  profile: mars
-  role: arn:aws:iam::207195171292:role/manuellambda #lambda-role (created by our own)
+  role: arn:aws:iam::726565968130:role/LambaMediumArticel
 
 
 functions:
