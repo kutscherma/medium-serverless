@@ -12,7 +12,7 @@ app.get('/', async (req, res, next) => {
     let S3 = new AWS.S3();
 
     const params = {
-      Bucket: 'mediumtestbucketlambda',
+      Bucket: 'mediumbucket-manuel',
       Key: 'salesrecords.csv'
     }
 

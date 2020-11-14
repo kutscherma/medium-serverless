@@ -1,5 +1,7 @@
 service: serverless-project
 
+plugins:
+  - serverless-iam-roles-per-function
 
 provider:
   name: aws
@@ -7,7 +9,6 @@ provider:
   stage: dev
   region: eu-west-1
   stackName: my-lambda-${self:provider.stage}
-  role: arn:aws:iam::726565968130:role/LambaMediumArticel
 
 
 functions:
@@ -25,3 +26,9 @@ functions:
           method: any
           cors: true
           private: false
+    iamRoleStatementsName: GetCsvDataS3
+    iamRoleStatements:
+      - Effect: Allow
+        Action:
+          - s3:GetObject
+        Resource: arn:aws:s3:::mediumbucket-manuel/* 
