@@ -1,4 +1,4 @@
-service: serverless-project
+service: get-sales-data
 
 plugins:
   - serverless-iam-roles-per-function
@@ -12,7 +12,7 @@ provider:
 
 
 functions:
-  hello:
+  myfunction:
     handler: handler.server
     name: ${self:provider.stage}-mylambda
     events: # events trigger lambda functions
@@ -26,9 +26,9 @@ functions:
           method: any
           cors: true
           private: false
-    iamRoleStatementsName: GetCsvDataS3
+    iamRoleStatementsName: LambdaGetCsvDataS3
     iamRoleStatements:
       - Effect: Allow
         Action:
           - s3:GetObject
-        Resource: arn:aws:s3:::mediumbucket-manuel/* 
+        Resource: arn:aws:s3:::<MY_BUCKET_NAME>/*
